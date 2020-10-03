@@ -21,7 +21,6 @@ const Trainer = ({ trainer }) => {
         <Text
           style={{
             alignSelf: "center",
-            fontFamily: "Roboto-Regular",
             fontWeight: "bold",
             fontSize: 15,
           }}
@@ -57,16 +56,11 @@ const wait = (timeout) => {
 
 function HomeScreen({ route, nav }) {
   const [refreshing, setRefreshing] = React.useState(false);
-  const [modalVisible, setModalVisible] = React.useState(false);
-  const [currentTrainer, setCurrentTrainer] = React.useState(false);
 
   const onRefresh = React.useCallback(() => {
     setRefreshing(true);
     wait(2000).then(() => setRefreshing(false));
   }, []);
-
-  console.log(route);
-  console.log(nav);
   /*  <View>
         <Text>Selected list of interest: </Text>
         <FlatList
@@ -80,7 +74,7 @@ function HomeScreen({ route, nav }) {
 
   return (
     <View style={{ flex: 1, paddingTop: 5, backgroundColor: "white" }}>
-      {/*Modal*/}
+      {/*Modal
 
       <Modal animationType="slide" transparent={true} visible={modalVisible}>
         <View style={s.centeredView}>
@@ -136,9 +130,7 @@ function HomeScreen({ route, nav }) {
           return (
             <TouchableOpacity
               onPress={() => {
-                setCurrentTrainer(item);
-                console.log(currentTrainer);
-                setModalVisible(true);
+                nav.navigate("Trainer", {item});
               }}
             >
               <Trainer trainer={item} />

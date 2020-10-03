@@ -71,7 +71,6 @@ module.exports = StyleSheet.create({
     // transform: [{ rotate: "20deg" }],
   },
   header: {
-    fontFamily: "Roboto-Regular",
     fontSize: 30,
     fontWeight: "bold",
     color: "black",

@@ -6,6 +6,7 @@ import LoginScreen from "./src/screens/Login.js";
 import HomeScreen from "./src/screens/Home.js";
 import InterestPromptScreen from "./src/screens/InterestPromptScreen.js";
 import RegisterScreen from "./src/screens/Register.js";
+import TrainerScreen from "./src/screens/Trainer.js";
 
 function Login({ navigation }) {
   return <LoginScreen nav={navigation}></LoginScreen>;
@@ -18,6 +19,9 @@ function InterestPrompt({ navigation }) {
 }
 function Register({ navigation }) {
   return <RegisterScreen nav={navigation}></RegisterScreen>;
+}
+function Trainer({ navigation }) {
+  return <TrainerScreen nav={navigation}></TrainerScreen>;
 }
 
 const Stack = createStackNavigator();
@@ -37,6 +41,7 @@ function Navigator() {
         options={{ headerLeft: null }}
       />
       <Stack.Screen name="Register" component={Register} />
+      <Stack.Screen name="Trainer" component={TrainerScreen} />
     </Stack.Navigator>
   );
 }
