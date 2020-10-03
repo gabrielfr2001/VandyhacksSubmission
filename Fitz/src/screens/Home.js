@@ -21,7 +21,7 @@ const Trainer = ({ trainer }) => {
         <Text
           style={{
             alignSelf: "center",
-            fontFamily: "Roboto",
+            fontFamily: "Roboto-Regular",
             fontWeight: "bold",
             fontSize: 15,
           }}
