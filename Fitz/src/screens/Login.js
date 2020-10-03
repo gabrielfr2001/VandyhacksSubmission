@@ -13,7 +13,7 @@ const LoginButton = ({ onPress, title }) => (
   </TouchableOpacity>
 );
 
-const LoginScreen = ({ nav }) => {
+function LoginScreen ({ nav }) {
   const [username, onChangeUsername] = React.useState("");
   const [password, onChangePassword] = React.useState("");
 

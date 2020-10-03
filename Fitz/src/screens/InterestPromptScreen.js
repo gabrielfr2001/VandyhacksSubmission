@@ -8,7 +8,6 @@ import {
 } from "react-native";
 
 const Card = ({ item, color }) => {
-  console.log(color);
   return (
     <View
       style={[
@@ -37,7 +36,7 @@ const Card = ({ item, color }) => {
   );
 };
 
-const InterestPromptScreen = ({ nav }) => {
+function InterestPromptScreen ({ nav }) {
   const selected = "#f2f2f2";
   const unselected = "white";
 
@@ -46,6 +45,7 @@ const InterestPromptScreen = ({ nav }) => {
   const [colorArray, setColorArray] = React.useState(
     new Array(interests.length).fill(unselected)
   );
+
   React.useEffect(
     () =>
       nav.addListener("beforeRemove", (e) => {
@@ -79,7 +79,6 @@ const InterestPromptScreen = ({ nav }) => {
                     ? unselected
                     : selected;
                 setColorArray(temp1);
-                console.log(temp1);
               }}
             >
               <Card
@@ -103,7 +102,7 @@ const InterestPromptScreen = ({ nav }) => {
           margin: 5,
         }}
         onPress={() => {
-          nav.navigate("Home", { array });
+          nav.navigate("Home", {post:"something"});
         }}
       >
         <Text style={s.textStyle}>Finish</Text>
