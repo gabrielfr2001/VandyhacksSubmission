@@ -13,6 +13,8 @@ module.exports = [
     age: 30,
     sex: "M",
     categories: ["Zoomba"],
+    coordinates: ["", ""],
+    description: "I like to teach people"
   },
   {
     id: "2",
@@ -22,6 +24,8 @@ module.exports = [
     age: 35,
     sex: "M",
     categories: ["Pilates", "Yoga"],
+    coordinates: ["", ""],
+    description: "I like to teach people"
   },
   {
     id: "3",
@@ -31,6 +35,9 @@ module.exports = [
     age: 25,
     sex: "F",
     categories: ["Strength trainer", "Pilates"],
+    coordinates: ["", ""],
+    description: "I like to teach people"
+
   },
   {
     id: "4",
@@ -40,6 +47,8 @@ module.exports = [
     age: 30,
     sex: "M",
     categories: ["Fitness Trainer", "Streigth Trainer"],
+    coordinates: ["", ""],
+    description: "I like to teach people"
   },
   {
     id: "5",
@@ -49,6 +58,8 @@ module.exports = [
     age: 42,
     sex: "M",
     categories: ["Pilates"],
+    coordinates: ["", ""],
+    description: "I like to teach people"
   },
   {
     id: "6",
@@ -58,6 +69,8 @@ module.exports = [
     age: 28,
     sex: "F",
     categories: ["Zoomba"],
+    coordinates: ["", ""],
+    description: "I like to teach people"
   },
   {
     id: "7",
@@ -67,5 +80,7 @@ module.exports = [
     age: 21,
     sex: "F",
     categories: ["Zoomba"],
+    coordinates: ["", ""],
+    description: "I like to teach people"
   },
 ];

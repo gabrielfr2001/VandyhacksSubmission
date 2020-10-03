@@ -7,13 +7,13 @@ var { StyleSheet } = React;
 module.exports = StyleSheet.create({
   appButtonContainer: {
     elevation: 8,
-    backgroundColor: "white",
+    backgroundColor: "#2196F3",
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 12,
     width: "80%",
     borderColor: "black",
-    borderWidth: 1,
+    borderWidth: 0,
     alignSelf: "center",
     padding: 10,
     margin: 10,
@@ -21,7 +21,7 @@ module.exports = StyleSheet.create({
   },
   appButtonText: {
     fontSize: 18,
-    color: "black",
+    color: "white",
     alignSelf: "center",
     textTransform: "uppercase",
   },
@@ -93,7 +93,7 @@ module.exports = StyleSheet.create({
     margin: 20,
     backgroundColor: "white",
     borderRadius: 20,
-    padding: 35,
+    padding: 15,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -118,5 +118,6 @@ module.exports = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: "center",
+    fontSize:25,
   },
 });
