@@ -1,18 +1,11 @@
-import React, { Component } from "react";
-import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-import { ScrollView } from "react-native-gesture-handler";
-import LinearGradient from "react-native-linear-gradient";
+import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   TouchableOpacity,
   View,
   Text,
   Image,
-  ImageBackground,
-  sheet,
-  Button,
   TextInput,
-  Alert,
 } from "react-native";
 const LoginButton = ({ onPress, title }) => (
   <TouchableOpacity onPress={onPress} style={s.appButtonContainer}>
