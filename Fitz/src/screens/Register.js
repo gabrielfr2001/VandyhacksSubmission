@@ -64,7 +64,7 @@ const RegisterScreen = ({ nav }) => {
           value={confirmPassword}
         />
         <LoginButton
-          title={"Finish"}
+          title={"Next"}
           onPress={() => {
             nav.navigate("Interests");
           }}
