@@ -4,10 +4,8 @@ import {
   View,
   Text,
   Image,
-  Modal,
   RefreshControl,
   FlatList,
-  TouchableHighlight,
 } from "react-native";
 import { Rating } from "react-native-ratings";
 
@@ -61,76 +59,17 @@ function HomeScreen({ route, nav }) {
     setRefreshing(true);
     wait(2000).then(() => setRefreshing(false));
   }, []);
-  /*  <View>
-        <Text>Selected list of interest: </Text>
-        <FlatList
-          style={{ padding: 20 }}
-          data={interests}
-          renderItem={({ item }) => {
-            return <Text style={{ fontSize: 15 }}>{item}</Text>;
-          }}
-        ></FlatList>
-      </View> */
 
   return (
     <View style={{ flex: 1, paddingTop: 5, backgroundColor: "white" }}>
-      {/*Modal
-
-      <Modal animationType="slide" transparent={true} visible={modalVisible}>
-        <View style={s.centeredView}>
-          <View style={s.modalView}>
-            <View style={{ flexDirection: "row" }}>
-              <View>
-                <Text style={s.modalText}>{currentTrainer.name}</Text>
-                <Image
-                  style={
-                    (s.cardProfileImage,
-                    { width: 150, height: 150, borderRadius: 20 })
-                  }
-                  source={currentTrainer.image}
-                ></Image>
-                <Rating
-                  ratingCount={5}
-                  startingValue={currentTrainer.rating}
-                  readonly
-                  imageSize={20}
-                />
-              </View>
-              <View>
-                <Text
-                  style={(s.modalText, { fontSize: 20, top: 40, padding: 20 })}
-                >
-                  {'"' + currentTrainer.description + '"'}
-                </Text>
-                <FlatList
-                  keyExtractor={(item) => item.id}
-                  style={{ padding: 20, top: 20 }}
-                  data={currentTrainer.categories}
-                  renderItem={({ item }) => {
-                    return <Text style={{ fontSize: 20 }}>{item}</Text>;
-                  }}
-                ></FlatList>
-              </View>
-            </View>
-            <TouchableHighlight
-              style={{ ...s.openButton, backgroundColor: "#2196F3" }}
-              onPress={() => {
-                setModalVisible(false);
-              }}
-            >
-              <Text style={s.textStyle}>Close</Text>
-            </TouchableHighlight>
-          </View>
-        </View>
-      </Modal>
-      {/*Modal*/}
+      {}
       <FlatList
         data={require("../dummy/cards.js")}
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
               onPress={() => {
-                nav.navigate("Trainer", {item});
+                nav.navigate("Trainer", { item });
               }}
             >
               <Trainer trainer={item} />

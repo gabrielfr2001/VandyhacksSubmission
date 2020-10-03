@@ -6,14 +6,12 @@ import {
   Text,
   Image,
   TextInput,
+  TouchableHighlight,
 } from "react-native";
-const LoginButton = ({ onPress, title }) => (
-  <TouchableOpacity onPress={onPress} style={s.appButtonContainer}>
-    <Text style={s.appButtonText}>{title}</Text>
-  </TouchableOpacity>
-);
+import CustomButton from "../component/CustomButton";
+import CustomInput from "../component/CustomInput";
 
-function LoginScreen ({ nav }) {
+function LoginScreen({ nav }) {
   const [username, onChangeUsername] = React.useState("");
   const [password, onChangePassword] = React.useState("");
 
@@ -28,35 +26,33 @@ function LoginScreen ({ nav }) {
         <Text style={s.header}>ANYWHERE.</Text>
       </View>
       <View style={{ flex: 2 }}>
-        <TextInput
-          style={s.input}
+        <CustomInput
+          placeholder="Username"
           onChangeText={(text) => onChangeUsername(text)}
           value={username}
-          placeholder="Username"
-        />
-        <TextInput
+        ></CustomInput>
+        <CustomInput
           placeholder="Password"
           secureTextEntry={true}
-          style={s.input}
           onChangeText={(text) => onChangePassword(text)}
           value={password}
-        />
-        <LoginButton
+        ></CustomInput>
+        <CustomButton
           title={"Login"}
           onPress={() => {
             nav.navigate("Home");
           }}
-        ></LoginButton>
-        <LoginButton
+        ></CustomButton>
+        <CustomButton
           title={"Register"}
           onPress={() => {
             nav.navigate("Register");
           }}
-        ></LoginButton>
+        ></CustomButton>
       </View>
     </SafeAreaView>
   );
-};
+}
 const s = require("../style/global-style.js");
 
 export default LoginScreen;

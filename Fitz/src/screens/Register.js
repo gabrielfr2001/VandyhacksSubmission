@@ -7,11 +7,8 @@ import {
   Image,
   TextInput,
 } from "react-native";
-const LoginButton = ({ onPress, title }) => (
-  <TouchableOpacity onPress={onPress} style={s.appButtonContainer}>
-    <Text style={s.appButtonText}>{title}</Text>
-  </TouchableOpacity>
-);
+import CustomButton from "../component/CustomButton";
+import CustomInput from "../component/CustomInput";
 
 const RegisterScreen = ({ nav }) => {
   const [username, onChangeUsername] = React.useState("");
@@ -30,38 +27,38 @@ const RegisterScreen = ({ nav }) => {
         <Text style={s.header}>ANYWHERE.</Text>
       </View>
       <View style={{ flex: 2.5 }}>
-        <TextInput
+        <CustomInput
           style={s.input}
           onChangeText={(text) => onChangeUsername(text)}
           value={username}
           placeholder="Username"
         />
-        <TextInput
+        <CustomInput
           placeholder="Email"
           style={s.input}
           onChangeText={(text) => onChangeEmail(text)}
           value={email}
         />
-        <TextInput
+        <CustomInput
           placeholder="Password"
           secureTextEntry={true}
           style={s.input}
           onChangeText={(text) => onChangePassword(text)}
           value={password}
         />
-        <TextInput
+        <CustomInput
           placeholder="Confirm password"
           secureTextEntry={true}
           style={s.input}
           onChangeText={(text) => onChangeConfirmPassword(text)}
           value={confirmPassword}
         />
-        <LoginButton
+        <CustomButton
           title={"Next"}
           onPress={() => {
             nav.navigate("Interests");
           }}
-        ></LoginButton>
+        ></CustomButton>
       </View>
     </SafeAreaView>
   );

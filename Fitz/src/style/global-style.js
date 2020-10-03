@@ -4,7 +4,56 @@ var React = require("react-native");
 
 var { StyleSheet } = React;
 
+const primaryColor = "#2196F3";
+const secondaryColor = "#2F96FF";
+const backgroundColor = "white";
+const foregroundColor = "white";
+const border = "black";
+
+const headerTextSize = 25;
+const normalTextSize = 20;
+const smallTextSize = 15;
+
+//Base
+const baseComponent = {
+  elevation: 5,
+  borderRadius: 10,
+  padding: 10,
+  margin: 10,
+  width: "80%",
+  alignSelf: "center",
+};
+
 module.exports = StyleSheet.create({
+  //Buttons
+  standardButton: {
+    ...baseComponent,
+    backgroundColor: primaryColor,
+  },
+
+  buttonText: {
+    color: foregroundColor,
+    alignSelf: "center",
+    fontSize: normalTextSize,
+    textTransform: "uppercase",
+  },
+
+  //Input
+
+  inputText: {
+    ...baseComponent,
+    backgroundColor: backgroundColor,
+    borderColor: border,
+    fontSize: smallTextSize,
+    borderWidth: 1,
+  },
+
+  //Cards
+
+  //Modal
+
+  //Texts
+
   appButtonContainer: {
     elevation: 8,
     backgroundColor: "#2196F3",
@@ -47,18 +96,6 @@ module.exports = StyleSheet.create({
     flex: 1,
     //borderColor: "black",
     borderRadius: 10,
-  },
-  input: {
-    backgroundColor: "white",
-    alignSelf: "center",
-    padding: 10,
-    margin: 10,
-    borderRadius: 10,
-    width: "80%",
-    elevation: 5,
-    borderColor: "black",
-    height: 43,
-    borderWidth: 1,
   },
   backgroundStyle: {
     flex: 1,
@@ -117,6 +154,6 @@ module.exports = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: "center",
-    fontSize:25,
+    fontSize: 25,
   },
 });
