@@ -1,26 +1,15 @@
-import React, { Component } from "react";
-import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-import { ScrollView } from "react-native-gesture-handler";
-import LinearGradient from "react-native-linear-gradient";
-import { SafeAreaView } from "react-native-safe-area-context";
-import TrainerModal from "../modals/TrainerModal.js";
+import React from "react";
 import {
   TouchableOpacity,
   View,
   Text,
   Image,
-  ImageBackground,
   Modal,
-  StyleSheet,
-  Button,
-  TextInput,
-  Alert,
   RefreshControl,
   FlatList,
   TouchableHighlight,
-  VirtualizedList,
 } from "react-native";
-import { Rating, AirbnbRating } from "react-native-ratings";
+import { Rating } from "react-native-ratings";
 
 const Trainer = ({ trainer }) => {
   return (
@@ -65,7 +54,7 @@ const wait = (timeout) => {
   });
 };
 
-const HomeScreen = ({ nav }) => {
+const HomeScreen = ({ nav, interests }) => {
   const [refreshing, setRefreshing] = React.useState(false);
   const [modalVisible, setModalVisible] = React.useState(false);
   const [currentTrainer, setCurrentTrainer] = React.useState(false);

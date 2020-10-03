@@ -1,26 +1,11 @@
-import React, { Component } from "react";
-import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-import { ScrollView } from "react-native-gesture-handler";
-import LinearGradient from "react-native-linear-gradient";
-import { SafeAreaView } from "react-native-safe-area-context";
-import TrainerModal from "../modals/TrainerModal.js";
+import React from "react";
 import {
   TouchableOpacity,
   View,
   Text,
-  Image,
-  ImageBackground,
-  Modal,
-  StyleSheet,
-  Button,
-  TextInput,
-  Alert,
-  RefreshControl,
   FlatList,
   TouchableHighlight,
-  VirtualizedList,
 } from "react-native";
-import { Rating, AirbnbRating } from "react-native-ratings";
 
 const Card = ({ item, color }) => {
   console.log(color);
@@ -70,7 +55,7 @@ const InterestPromptScreen = ({ nav }) => {
   );
 
   return (
-    <View style={{ flex: 1, paddingTop: 5, backgroundColor: 'white' }}>
+    <View style={{ flex: 1, paddingTop: 5, backgroundColor: "white" }}>
       <View style={{ elevation: 10, padding: 10 }}>
         <Text style={{ fontSize: 20, padding: 10 }}>
           Choose the categories you are interested in
@@ -90,7 +75,9 @@ const InterestPromptScreen = ({ nav }) => {
                 setArray(temp);
                 let temp1 = JSON.parse(JSON.stringify(colorArray));
                 temp1[interests.indexOf(item)] =
-                  temp1[interests.indexOf(item)] === selected ? unselected : selected;
+                  temp1[interests.indexOf(item)] === selected
+                    ? unselected
+                    : selected;
                 setColorArray(temp1);
                 console.log(temp1);
               }}
@@ -116,7 +103,7 @@ const InterestPromptScreen = ({ nav }) => {
           margin: 5,
         }}
         onPress={() => {
-          nav.navigate("Home");
+          nav.navigate("Home", { array });
         }}
       >
         <Text style={s.textStyle}>Finish</Text>
