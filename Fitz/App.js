@@ -22,7 +22,10 @@ function Navigator() {
         component={Login}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+      />
     </Stack.Navigator>
   );
 }
